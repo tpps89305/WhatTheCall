@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:what_the_call/detail_page.dart';
 import 'package:what_the_call/helpers/constants.dart';
 import 'models/record.dart';
 import 'models/record_list.dart';
@@ -121,7 +122,11 @@ class _HomePageState extends State<HomePage> {
           ),
           trailing: const Icon(Icons.keyboard_arrow_right,
               color: Colors.white, size: 30.0),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context, 
+              MaterialPageRoute(builder: (context) => DetailPage(record: record)));
+          },
         ),
       ),
     );
