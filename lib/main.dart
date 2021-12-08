@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
+import 'home_page.dart';
 import 'login_page.dart';
 import 'helpers/constants.dart';
 
-void main() => runApp(const ContactlyApp());
+void main() => runApp(ContactlyApp());
 
 class ContactlyApp extends StatelessWidget {
-  const ContactlyApp({Key? key}) : super(key: key);
+  ContactlyApp({Key? key}) : super(key: key);
+
+  final routes = <String, WidgetBuilder>{
+    loginPageTag: (context) => LoginPage(),
+    homePageTag: (context) => HomePage()
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +20,7 @@ class ContactlyApp extends StatelessWidget {
       title: appTitle,
       theme: ThemeData(primaryColor: appDarkGreyColor),
       home: LoginPage(),
+      routes: routes,
     );
   }
 }

@@ -10,21 +10,21 @@
     "name":"Bill Gates",
     "address":"Microsoft",
     "contact" : "12345678",
-    "photo": "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2018/07/11/105322791-1531301768595gettyimages-467620670.1910x1000.jpg?v=1545151032",
+    "photo": "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2018/07/11/105322791-1531301768595gettyimages-467620670.1910x1000.jpg",
     "url": "https://www.microsoft.com"
   },
   {
     "name":"Tim Cook",
     "address":"Apple",
     "contact" : "12345678",
-    "photo": "https://9to5mac.com/wp-content/uploads/sites/6/2019/01/Tim-Cook-Huawei.jpg?quality=82&strip=all&w=1500",
+    "photo": "https://9to5mac.com/wp-content/uploads/sites/6/2019/01/Tim-Cook-Huawei.jpg",
     "url": "https://www.apple.com"
   },
   {
     "name":"Mark Zuckerberg",
     "address":"Facebook",
     "contact" : "12345678",
-    "photo": "https://timedotcom.files.wordpress.com/2018/01/mark-zuckerberg-new-years-resolution-facebook.jpg",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg/1280px-Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg",
     "url": "https://www.facebook.com"
   },
   {
@@ -38,7 +38,7 @@
     "name":"Jack Ma",
     "address":"Alibaba",
     "contact" : "12345678",
-    "photo": "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/01/18/104225995-_95A5004.530x298.jpg?v=1540458420",
+    "photo": "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/01/18/104225995-_95A5004.530x298.jpg",
     "url": "https://www.alibaba.com"
   },
   {
@@ -52,7 +52,7 @@
     "name":"Robert H. Swan",
     "address":"Intel",
     "contact" : "12345678",
-    "photo": "https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Ffortunedotcom.files.wordpress.com%2F2016%2F09%2Fbob-swan.jpg&w=1600&q=70",
+    "photo": "https://ebay.q4cdn.com/610426115/files/images/board/2020/photo_SwanR.jpg",
     "url": "https://www.intel.com"
   },
   {

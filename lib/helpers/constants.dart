@@ -18,3 +18,6 @@ final ButtonStyle loginButtonStyle = ElevatedButton.styleFrom(
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(24),
     ));
+
+const loginPageTag = 'Login Page';
+const homePageTag = 'Home Page';

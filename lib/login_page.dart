@@ -5,16 +5,18 @@ import 'helpers/constants.dart';
 class LoginPage extends StatelessWidget {
   // 2
   final _pinCodeController = TextEditingController();
+
+  LoginPage({Key? key}) : super(key: key);
   // 3
   @override
   Widget build(BuildContext context) {
-     // 3a
+    // 3a
     final logo = CircleAvatar(
-        backgroundColor: Colors.transparent,
-        radius: bigRadius,
-        child: appLogo,
+      backgroundColor: Colors.transparent,
+      radius: bigRadius,
+      child: appLogo,
     );
-     // 3b
+    // 3b
     final pinCode = TextFormField(
       controller: _pinCodeController,
       keyboardType: TextInputType.phone,
@@ -27,24 +29,24 @@ class LoginPage extends StatelessWidget {
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(32.0),
           ),
-          hintStyle: const TextStyle(
-              color: Colors.white
-          )
-      ),
+          hintStyle: const TextStyle(color: Colors.white)),
       style: const TextStyle(
         color: Colors.white,
       ),
     );
-     // 3c
+    // 3c
     final loginButton = Padding(
       padding: const EdgeInsets.symmetric(vertical: 16.0),
       child: ElevatedButton(
         style: loginButtonStyle,
-        onPressed: () {},
-        child: const Text(loginButtonText, style: TextStyle(color: Colors.white)),
+        onPressed: () {
+          Navigator.of(context).pushNamed(homePageTag);
+        },
+        child:
+            const Text(loginButtonText, style: TextStyle(color: Colors.white)),
       ),
     );
-     // 3d
+    // 3d
     return Scaffold(
       backgroundColor: appDarkGreyColor,
       body: Center(
