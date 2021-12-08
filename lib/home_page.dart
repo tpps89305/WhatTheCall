@@ -19,8 +19,8 @@ class _HomePageState extends State<HomePage> {
   final RecordList _records = RecordList(records: []);
   final RecordList _filteredRecords = RecordList(records: []);
   String _searchText = "";
-  final Icon _searchIcon = const Icon(Icons.search);
-  final Widget _appBarTitle = const Text(appTitle);
+  Icon _searchIcon = const Icon(Icons.search);
+  Widget _appBarTitle = const Text(appTitle);
 
   @override
   void initState() {
@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: appDarkGreyColor,
       centerTitle: true,
       title: _appBarTitle,
-      leading: IconButton(onPressed: () {}, icon: _searchIcon),
+      leading: IconButton(onPressed: _searchPressed, icon: _searchIcon),
     );
   }
 
@@ -125,6 +125,49 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     );
+  }
+
+  _HomePageState() {
+    _filter.addListener(() {
+      if (_filter.text.isEmpty) {
+        setState(() {
+          _searchText = "";
+          _resetRecords();
+        });
+      } else {
+        setState(() {
+          _searchText = _filter.text;
+        });
+      }
+    });
+  }
+
+  void _resetRecords() {
+    _filteredRecords.records = [];
+    for (Record record in _records.records) {
+      _filteredRecords.records.add(record);
+    }
+  }
+
+  void _searchPressed() {
+    setState(() {
+      if (_searchIcon.icon == Icons.search) {
+        _searchIcon = const Icon(Icons.close);
+        _appBarTitle = TextField(
+          controller: _filter,
+          style: const TextStyle(color: Colors.white),
+          decoration: const InputDecoration(
+              prefixIcon: Icon(Icons.search, color: Colors.white),
+              fillColor: Colors.white,
+              hintText: 'Search by name',
+              hintStyle: TextStyle(color: Colors.white)),
+        );
+      } else {
+        _searchIcon = const Icon(Icons.search);
+        _appBarTitle = const Text(appTitle);
+        _filter.clear();
+      }
+    });
   }
 
   @override
