@@ -1,16 +1,38 @@
 # what_the_call
 
-A new Flutter project.
+This is a flutter app which available on Android and iOS.
 
-## Getting Started
+## Screenshots
+![Login page](readme/login_page.png)
+<h2>Login page</h2>
+<br/>
+<br/>
 
-This project is a starting point for a Flutter application.
+![List page](readme/list_page.png)
+<h2>List page</h2>
+<br/>
+<br/>
 
-A few resources to get you started if this is your first Flutter project:
+![Search page](readme/search_function.png)
+<h2>Search function</h2>
+<br/>
+<br/>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+![Contact detail](readme/contact_detail.png)
+<h2>Contact detail</h2>
+<br/>
+<br/>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Widget Usage (Emphasis)
+- CircleAvatar
+- ListView
+- AppBar
+- Card
+- Hero
+- GestureDetector
+
+## Flutter Info
+- Flutter 2.5.3 • channel stable • https://github.com/flutter/flutter.git
+- Framework • revision 18116933e7 (8 weeks ago) • 2021-10-15 10:46:35 -0700
+- Engine • revision d3ea636dc5
+- Tools • Dart 2.14.4
