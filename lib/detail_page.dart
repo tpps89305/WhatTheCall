@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'models/record.dart';
 import 'helpers/constants.dart';
+import 'helpers/url_launcher.dart';
 
 // 1
 class DetailPage extends StatelessWidget {
@@ -29,7 +30,7 @@ class DetailPage extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              // TODO: URLLauncher....
+              URLLauncher().launchURL(record.url);
             },
             child: Container(
               padding: const EdgeInsets.all(32.0),
