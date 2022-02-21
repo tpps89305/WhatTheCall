@@ -32,7 +32,7 @@ This is a flutter app which available on Android and iOS.
 - GestureDetector
 
 ## Flutter Info
-- Flutter 2.5.3 • channel stable • https://github.com/flutter/flutter.git
-- Framework • revision 18116933e7 (8 weeks ago) • 2021-10-15 10:46:35 -0700
-- Engine • revision d3ea636dc5
-- Tools • Dart 2.14.4
+- Flutter 2.9.0-1.0.pre.144 • channel master • https://github.com/flutter/flutter.git
+- Framework • revision 07a36f07e3 (9 weeks ago) • 2021-12-21 01:09:07 -0500
+- Engine • revision d3075cd085
+- Tools • Dart 2.16.0 (build 2.16.0-123.0.dev) • DevTools 2.9.1
