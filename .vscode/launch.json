@@ -20,6 +20,13 @@
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
+        },
+        // Avoid 'failed to load Network image' issue on web
+        {
+            "name": "what_the_call (Html renderer)",
+            "request": "launch",
+            "type": "dart",
+            "args": ["--web-renderer", "html"]
         }
     ]
 }
