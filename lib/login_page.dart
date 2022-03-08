@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:what_the_call/models/language.dart';
 import 'helpers/constants.dart';
 
 // 1
@@ -24,7 +25,7 @@ class LoginPage extends StatelessWidget {
       maxLines: 1,
       autofocus: true,
       decoration: InputDecoration(
-          hintText: pinCodeHintText,
+          hintText: Language.of(context).pinCodeHintText,
           contentPadding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(32.0),
@@ -43,7 +44,7 @@ class LoginPage extends StatelessWidget {
           Navigator.of(context).pushNamed(homePageTag);
         },
         child:
-            const Text(loginButtonText, style: TextStyle(color: Colors.white)),
+            Text(Language.of(context).loginButtonText, style: TextStyle(color: Colors.white)),
       ),
     );
     // 3d

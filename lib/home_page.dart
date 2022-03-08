@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:what_the_call/detail_page.dart';
 import 'package:what_the_call/helpers/constants.dart';
+import 'package:what_the_call/models/language.dart';
 import 'models/record.dart';
 import 'models/record_list.dart';
 import 'models/record_service.dart';
@@ -21,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   final RecordList _filteredRecords = RecordList(records: []);
   String _searchText = "";
   Icon _searchIcon = const Icon(Icons.search);
-  Widget _appBarTitle = const Text(appTitle);
+  Widget? _appBarTitle;
 
   @override
   void initState() {
@@ -43,12 +44,18 @@ class _HomePageState extends State<HomePage> {
   }
 
   PreferredSizeWidget _buildBar(BuildContext context) {
+    // Initial
+    _appBarTitle ??= Text(Language.of(context).appTitle);
     return AppBar(
       elevation: 0.1,
       backgroundColor: appDarkGreyColor,
       centerTitle: true,
       title: _appBarTitle,
-      leading: IconButton(onPressed: _searchPressed, icon: _searchIcon),
+      leading: IconButton(
+          onPressed: () {
+            _searchPressed(context);
+          },
+          icon: _searchIcon),
     );
   }
 
@@ -124,8 +131,9 @@ class _HomePageState extends State<HomePage> {
               color: Colors.white, size: 30.0),
           onTap: () {
             Navigator.push(
-              context, 
-              MaterialPageRoute(builder: (context) => DetailPage(record: record)));
+                context,
+                MaterialPageRoute(
+                    builder: (context) => DetailPage(record: record)));
           },
         ),
       ),
@@ -154,7 +162,7 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-  void _searchPressed() {
+  void _searchPressed(BuildContext context) {
     setState(() {
       if (_searchIcon.icon == Icons.search) {
         _searchIcon = const Icon(Icons.close);
@@ -169,7 +177,7 @@ class _HomePageState extends State<HomePage> {
         );
       } else {
         _searchIcon = const Icon(Icons.search);
-        _appBarTitle = const Text(appTitle);
+        _appBarTitle = Text(Language.of(context).appTitle);
         _filter.clear();
       }
     });

@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
-Color appDarkGreyColor = Color.fromRGBO(58, 66, 86, 1.0);
-Color appGreyColor = Color.fromRGBO(64, 75, 96, .0);
-
-const appTitle = "Contactly";
-const pinCodeHintText = "Pin Code";
-const loginButtonText = "Login";
+Color appDarkGreyColor = const Color.fromRGBO(58, 66, 86, 1.0);
+Color appGreyColor = const Color.fromRGBO(64, 75, 96, .0);
 
 Image appLogo = Image.asset('assets/images/flutter-logo-round.png');
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:what_the_call/models/language.dart';
 import 'models/record.dart';
 import 'helpers/constants.dart';
 import 'helpers/url_launcher.dart';
@@ -43,12 +44,12 @@ class DetailPage extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.only(bottom: 8.0),
                         child: Text(
-                          "Name: " + record.name,
+                          "${Language.of(context).name}: ${record.name}",
                           style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ),
                       Text(
-                        "Address: " + record.address,
+                        "${Language.of(context).address}: ${record.address}",
                         style: const TextStyle(color: Colors.grey),
                       ),
                     ],
