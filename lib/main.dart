@@ -12,7 +12,7 @@ class ContactlyApp extends StatelessWidget {
 
   final routes = <String, WidgetBuilder>{
     loginPageTag: (context) => LoginPage(),
-    homePageTag: (context) => HomePage()
+    homePageTag: (context) => const HomePage()
   };
 
   @override

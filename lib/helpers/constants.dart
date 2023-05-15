@@ -9,7 +9,7 @@ const bigRadius = 66.0;
 const buttonHeight = 24.0;
 
 final ButtonStyle loginButtonStyle = ElevatedButton.styleFrom(
-    primary: appDarkGreyColor,
+    foregroundColor: appDarkGreyColor,
     padding: const EdgeInsets.all(12),
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(24),

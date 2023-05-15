@@ -43,8 +43,12 @@ class LoginPage extends StatelessWidget {
         onPressed: () {
           Navigator.of(context).pushNamed(homePageTag);
         },
-        child:
-            Text(Language.of(context).loginButtonText, style: TextStyle(color: Colors.white)),
+        child: Text(
+          Language.of(context).loginButtonText,
+          style: const TextStyle(
+            color: Colors.white,
+          ),
+        ),
       ),
     );
     // 3d
