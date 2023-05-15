@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:what_the_call/models/language.dart';
 import 'models/record.dart';
@@ -16,6 +18,24 @@ class DetailPage extends StatelessWidget {
       backgroundColor: appDarkGreyColor,
       centerTitle: true,
       title: Text(title),
+      actions: [
+        IconButton(
+          onPressed: () {
+            Navigator.of(context).popUntil(
+              (Route<dynamic> route) {
+                if (route.settings.name != null) {
+                  log(route.settings.name!);
+                  return route.settings.name! == "Home Page";
+                }
+                return false;
+              },
+            );
+          },
+          icon: const Icon(
+            Icons.home,
+          ),
+        )
+      ],
     );
   }
 
